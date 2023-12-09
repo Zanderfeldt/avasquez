@@ -1,0 +1,323 @@
+
+* {
+	box-sizing: border-box
+}
+
+body {
+	background-color: #51c0a0;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	
+
+}
+
+.pw-container {
+	background-color: #219071;
+	min-width: 400px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+	margin: 1rem;
+}
+
+.pw-header {
+	
+	padding: 1rem;
+
+}
+.pw {
+	width: 100%;
+	height: 50px;
+	background-color: #51c0a0;
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-size: 1.6rem;
+	padding: 1rem;
+	
+}
+
+.pw button {
+	position: absolute;
+	right:0;
+	top: 0;
+	transform: translateX(0,-50%);
+	background-color:white;
+	color:  #219071;
+	padding: 0.25rem;
+	border: none;
+	font-family: inherit;
+	opacity:0;
+	transition: opacity 0.2s ease;
+	cursor: pointer
+}
+
+.pw:hover button {
+	opacity: 1
+}
+
+.pw-body {
+	padding: 0 1rem 1rem;
+}
+
+.form-control {
+	display: flex;
+	justify-content: space-between;
+	margin: 0.75rem 0;
+	color: #eee
+}
+
+.info {
+	margin-bottom: 0;
+}
+
+.generate {
+	display: block;
+	background-color: #ddc63a;
+	color: #1a8063;
+	font-weight: bold;
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	border: none;
+	width: 100%;
+	text-align: center;
+}
+.generate:hover {
+	cursor: pointer;
+}
+
+.hash-log {
+	background-color:  #1a8063;
+	min-width: 600px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+	margin: 1rem;
+	max-width: 40%;
+}
+
+.hash-info {
+	padding: 0.5rem 0.75rem 0.75rem 0.5rem;
+	
+	background-color: #51c0a0;
+	margin: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	position: relative;
+}
+
+i {
+	position: relative;
+	transform: translateY(25%)
+}
+
+.close {
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+
+.close:hover {
+	cursor: pointer;
+}
+
+.info-text {
+	background-color: #ddc63a;
+		color: #1a8063;
+}
+
+.info-hash {
+
+	position: absolute;
+	background-color: #1a8063;
+	padding: 1rem;
+	color: white;
+	bottom: 8%;
+	
+	
+	margin-left: 5rem;
+	margin-right: 5rem;
+	max-height: 12rem;
+	overflow-Y: scroll;
+
+}
+
+.salt-info {
+	margin-top: 1rem;
+}		
+#title {
+	position: absolute;
+	top: 0;
+	padding: 2rem;
+	font-size: clamp(3rem, 4vw, 5rem);
+	text-align: center;
+}
+#combinations {
+	margin-left: 5px;
+}
+
+#bcrypt {
+	font-size: 0.9rem;
+}
+
+.hashing {
+	text-align: center;
+}
+
+.salt {
+	font-size: 0.85rem;
+}
+
+
+@media screen and (max-width: 1500px) {
+	body {
+		justify-content: inherit;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	body {
+		justify-content: flex-start;
+		display: block;
+	}
+	#title {
+		position: relative;
+	}
+	.hash-log {
+		min-width: 350px;
+		max-width: 100%;
+		margin: 0px;
+		
+	}
+	.hash-info {
+		font-size:0.9rem;
+	}	
+	.info-hash {
+		position: relative;
+	}
+	#bcrypt {
+		font-size: 0.6rem;
+		padding: 0 0.25rem;
+		position: relative;
+		
+		
+	}
+	.pw-container {
+		margin: 0.25rem;
+		margin-bottom: 0.5rem;	
+	}
+}
+
+
+/* --- snack */
+
+#snackbar {
+	font-family: Arial;
+	line-height: 1em;
+	visibility: hidden;
+	width: 200px;
+	min-width: 200px;
+	max-width: 300px;
+	background-color: white;
+	border-radius: 2px;
+	padding: 10px;
+	position: fixed;
+	z-index: 100;
+	bottom: 0px;
+	left: 0px;
+	font-size: 17px;
+	margin: 1%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	color: black;
+}
+
+#snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s;
+	animation: fadein 0.5s;
+}
+
+#snackbar a:hover {
+	text-decoration: none;
+}
+.snckhdr {
+	font-weight: bold;
+	color: black;
+	margin-bottom: 10px;
+	font-size: 1.1em;
+	width: 100%;
+}
+
+.snckmsg {
+	color: #4e4e4e;
+	font-size: 0.85em;
+}
+
+.snckmsg img {
+	width: 40px;
+}
+
+#hlclose {
+	position: absolute;
+	float: right;
+	display: inline-block;
+	padding: 2px 5px;
+	top: 3px;
+	right: 5px;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.hash, .hash-time {
+	background-color: #1a8063;
+	display: inline-block;
+	padding: 0 1rem;
+}
+
+
+.hash-time-unit {
+	display: inline-block;
+	
+	
+}
+
+.salt-info {
+	display:inline-block;
+	background-color: black;
+	margin: 0px;
+	position: relative;
+	border-radius: 3px;
+	padding: 0px 0.25rem;
+}
+
+.salt-info:hover {
+	cursor: pointer;
+}
+
+.salt-info:hover .salt-info-content {
+	display: inline-block;
+}
+
+
+
+
+
+.salt-info-content {
+	width: 400px;
+	left: -350px;
+	display: none;
+	position: absolute;
+	background-color: #1a8063;
+	padding: 1rem;
+	z-index: 1;
+}
+
