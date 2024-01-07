@@ -448,7 +448,7 @@ var typewriter = new Typewriter(app, {
 typewriter
   .pauseFor(1000)
   .typeString(
-    "Yes, this is just another typewriter effect ( not creative, but they look nice )."
+    "Yes, this is just another typewriter effect ( not creative, but it looks nice )."
   )
   .pauseFor(1000)
   .deleteChars(88)
