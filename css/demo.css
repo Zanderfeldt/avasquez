@@ -30,7 +30,7 @@ body {
   --link-color: #2fca00;
   --link-hover-color: #fff;
   font-family: "Roboto Mono", monospace;
-  font-weight: 500;
+  font-weight: 480;
   color: #fff;
   color: var(--text-color);
   background-color: #363dc2;
@@ -226,7 +226,7 @@ a:focus {
   margin: 0;
   text-transform: lowercase;
   z-index: 10;
-  cursor: default;
+  /* cursor: default; */
 }
 
 .content__author {
@@ -237,7 +237,7 @@ a:focus {
   padding: 1em;
   text-align: right;
   z-index: 10;
-  cursor: default;
+  /* cursor: default; */
 }
 
 .content__desc {
@@ -246,9 +246,30 @@ a:focus {
   margin-top: 5px;
   z-index: 10;
   padding: 0 1em;
-  cursor: default;
+  /* cursor: default; */
 }
 
+.hover-green {
+  position: relative;
+  z-index: 1;
+  transition: background-position-x 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .hover-green {
+     margin: 0.2em 0; /* Adjust line height as needed */
+  }
+}
+
+.content-wrap:hover .hover-green {
+  background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.486) 50%);
+  background-size: 200% 100%;
+  background-position-x: -100%;
+}
+
+.content-wrap:hover {
+  cursor: pointer;
+}
 .content__img,
 .content__title,
 .content__author,
@@ -262,7 +283,8 @@ a:focus {
   align-self: end;
   justify-self: start;
   z-index: 10;
-  padding: 0 1em 0.15em;
+  padding: 0 0.5em 0.15em;
+  font-size: 20px;
 }
 
 .content__info {

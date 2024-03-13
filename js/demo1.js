@@ -1,13 +1,4 @@
-/**
- * demo1.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2017, Codrops
- * http://www.codrops.com
- */
+
 {
   // Helper vars and functions.
   const extend = function (a, b) {
@@ -448,13 +439,10 @@ var typewriter = new Typewriter(app, {
 typewriter
   .pauseFor(1000)
   .typeString(
-    "Yes, this is just another typewriter effect ( not creative, but it looks nice )."
+    "Welcome to my digital portfolio!"
   )
   .pauseFor(1000)
   .deleteChars(88)
-  .typeString("I'm a recent graduate Software Engineer.")
-  .pauseFor(1000)
-  .deleteChars(44)
   .typeString("Here you can find some of my work.")
   .pauseFor(1000)
   .start();
