@@ -189,7 +189,7 @@ a:focus {
 }
 
 .content--related {
-  text-align: center;
+  /* text-align: center; */
   align-content: center;
   justify-content: center;
   padding: 0 2em;
@@ -197,6 +197,10 @@ a:focus {
   height: 100vh;
   max-height: 100vh;
   font-size: 0.85em;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .about-me {
@@ -400,8 +404,14 @@ a:focus {
 
 /* Demos */
 .demos {
-  grid-area: demos;
-  align-self: end;
+  /* grid-area: demos; */
+  /* align-self: end; */
+}
+
+.nav {
+  margin-left: auto;
+  /* position: absolute; */
+  /* right: 0; */
 }
 
 .demo {
@@ -480,6 +490,21 @@ a:focus {
   fill: none;
   stroke-width: 12px;
   stroke: #22bcc0;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1747c0; /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #17b1b5; /* Color of the scrollbar handle on hover */
 }
 
 @media screen and (max-width: 50em) {

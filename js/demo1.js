@@ -443,6 +443,6 @@ typewriter
   )
   .pauseFor(1000)
   .deleteChars(88)
-  .typeString("Here you can find some of my work.")
+  .typeString("Here you can find some of my work")
   .pauseFor(1000)
   .start();
